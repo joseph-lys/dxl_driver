@@ -1,0 +1,3 @@
+[submodule "dxl_driver_core"]
+	path = dxl_driver_core
+	url = https://github.com/joseph-lys/dxl_driver_core
