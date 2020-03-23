@@ -10,7 +10,7 @@ include_directories(
 )
 include_directories(
   include
-  dxl_driver_core/include
+  dxl_driver_core/src
 )
 
 # unit tests
@@ -20,6 +20,7 @@ enable_testing()
 add_library(
   ${PROJECT_NAME}_core
   "dxl_driver_core/src/DxlProtocolV1.cpp"
+  "dxl_driver_core/src/DxlDriver.cpp"
 )
 
 ### UNIT TESTS ###
@@ -28,13 +29,15 @@ ${PROJECT_NAME}_unit_tests
   "test/unit_test_main.cpp"
   "test/mock.cpp"
   "test/test_protocol_v1.cpp"
+  "test/test_driver.cpp"
+  "test/utils.cpp"
 )
 
 target_include_directories(
   ${PROJECT_NAME}_unit_tests 
   PRIVATE 
   ${INCLUDE_DIRECTORIES}
-  test 
+  # test 
   ${GTEST_INCLUDE_DIRS}
 )
 
