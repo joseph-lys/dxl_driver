@@ -35,7 +35,7 @@ void MockHwDriver::beginTransmission(uint8_t* tx_buffer, size_t tx_buffer_size, 
   mExpectedReplySize = expected_reply_size;
 }
 
-void MockHwDriver::mockInitReceive() {
+void MockHwDriver::mockInit() {
   rx_fill_index_ = 0;
   rx_read_index_ = 0;
 }

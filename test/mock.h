@@ -26,7 +26,7 @@ class MockHwDriver : public IfHwDxlDriverBase {
   /// Helper functions for RX buffer manipulation
   ///
   /// reset the receive buffer
-  void mockInitReceive(); 
+  void mockInit(); 
   /// "receive" some bytes
   void mockReceive(uint8_t* buf, size_t len);
   /// "receive" a single byte
